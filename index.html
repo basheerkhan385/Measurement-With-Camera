@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Measure With Camera - AR</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HOME SCREEN
+    ========================== -->
+
+    <main id="home-screen">
+
+        <div class="home-container">
+
+            <h1>
+                Measure With Camera
+            </h1>
+
+            <p>
+                Measure real-world distance using AR
+            </p>
+
+            <button
+                id="start-btn"
+                class="primary-btn"
+            >
+                Start Measurement
+            </button>
+
+            <button
+                id="history-btn"
+                class="secondary-btn"
+            >
+                View History
+            </button>
+
+            <div
+                id="support-message"
+                class="support-message"
+            ></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         AR SCREEN
+    ========================== -->
+
+    <main
+        id="ar-screen"
+        class="hidden"
+    >
+
+        <!-- Center reticle -->
+
+        <div
+            id="reticle"
+            class="reticle"
+        >
+
+            <div class="reticle-dot"></div>
+
+            <div class="reticle-line horizontal"></div>
+
+            <div class="reticle-line vertical"></div>
+
+        </div>
+
+
+        <!-- Top information -->
+
+        <div
+            id="status-box"
+            class="status-box"
+        >
+            Move your phone slowly to detect a surface.
+        </div>
+
+
+        <!-- Measurement result -->
+
+        <div
+            id="measurement-box"
+            class="measurement-box hidden"
+        >
+
+            <div class="measurement-title">
+                Distance
+            </div>
+
+            <div id="measurement-value">
+                0.00 m
+            </div>
+
+            <div id="measurement-conversions">
+                0.00 cm &nbsp; | &nbsp; 0.00 ft
+            </div>
+
+        </div>
+
+
+        <!-- Bottom controls -->
+
+        <div class="ar-controls">
+
+            <button
+                id="add-point-btn"
+                class="add-point-btn"
+            >
+                + Add Point
+            </button>
+
+            <button
+                id="reset-btn"
+                class="reset-btn"
+            >
+                Reset
+            </button>
+
+            <button
+                id="exit-btn"
+                class="exit-btn"
+            >
+                Exit
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Three.js + AR -->
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

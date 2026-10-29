@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fa;
+
+    color: #222;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home-screen {
+
+    width: 100vw;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+.home-container {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    text-align: center;
+
+}
+
+
+.home-container h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.home-container p {
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    border-radius: 12px;
+
+    padding: 16px 20px;
+
+}
+
+
+.primary-btn {
+
+    width: 100%;
+
+    background: #111;
+
+    color: white;
+
+    margin-bottom: 12px;
+
+}
+
+
+.secondary-btn {
+
+    width: 100%;
+
+    background: white;
+
+    color: #111;
+
+    border: 2px solid #111;
+
+}
+
+
+button:active {
+
+    transform: scale(0.97);
+
+}
+
+
+/* =========================
+   AR SCREEN
+========================= */
+
+#ar-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =========================
+   AR STATUS
+========================= */
+
+.status-box {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+
+    max-width: 450px;
+
+    padding: 12px 18px;
+
+    border-radius: 15px;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    z-index: 20;
+
+}
+
+
+/* =========================
+   RETICLE
+========================= */
+
+.reticle {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 45px;
+
+    height: 45px;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 15;
+
+    pointer-events: none;
+
+}
+
+
+.reticle-dot {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 10px;
+
+    height: 10px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 2px solid black;
+
+}
+
+
+.reticle-line {
+
+    position: absolute;
+
+    background: white;
+
+}
+
+
+.reticle-line.horizontal {
+
+    width: 45px;
+
+    height: 2px;
+
+    top: 50%;
+
+    left: 0;
+
+}
+
+
+.reticle-line.vertical {
+
+    width: 2px;
+
+    height: 45px;
+
+    top: 0;
+
+    left: 50%;
+
+}
+
+
+/* =========================
+   MEASUREMENT RESULT
+========================= */
+
+.measurement-box {
+
+    position: absolute;
+
+    top: 90px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    min-width: 220px;
+
+    padding: 15px 20px;
+
+    border-radius: 18px;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 20;
+
+}
+
+
+.measurement-title {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+
+    opacity: 0.8;
+
+}
+
+
+#measurement-value {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+#measurement-conversions {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   AR CONTROLS
+========================= */
+
+.ar-controls {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    z-index: 30;
+
+}
+
+
+.add-point-btn {
+
+    background: white;
+
+    color: #111;
+
+    border-radius: 50px;
+
+    padding: 16px 25px;
+
+}
+
+
+.reset-btn {
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: white;
+
+    border-radius: 50px;
+
+    padding: 16px 20px;
+
+}
+
+
+.exit-btn {
+
+    background: rgba(180, 0, 0, 0.85);
+
+    color: white;
+
+    border-radius: 50px;
+
+    padding: 16px 20px;
+
+}
+
+
+/* =========================
+   SUPPORT MESSAGE
+========================= */
+
+.support-message {
+
+    margin-top: 20px;
+
+    color: #c00;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .home-container h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .home-container p {
+
+        font-size: 15px;
+
+    }
+
+
+    .ar-controls {
+
+        bottom: 20px;
+
+    }
+
+
+    .add-point-btn {
+
+        padding: 15px 20px;
+
+        font-size: 15px;
+
+    }
+
+
+    .reset-btn,
+    .exit-btn {
+
+        padding: 15px 16px;
+
+        font-size: 14px;
+
+    }
+
+}
